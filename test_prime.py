@@ -19,4 +19,5 @@ class PrimeNumberTest(unittest.TestCase):
         b = primes(100)
         self.assertNotIn(9, b)
 
-    
+    def test_for_input_less_than_2(self):
+        self.assertRaises(ValueError, self.primes, 1)
